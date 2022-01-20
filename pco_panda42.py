@@ -30,7 +30,6 @@ class Camera:
         wSZCameraNameLen = 40
         camera_name = C.c_char_p(wSZCameraNameLen * b'')
         dll.get_camera_name(self.handle, camera_name, wSZCameraNameLen)
-        print(camera_name.value)
         assert camera_name.value == b'pco.panda 4.2'
         self._num_buffers = 16 # default to maximum
         self._armed = False
