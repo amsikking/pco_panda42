@@ -845,7 +845,7 @@ if __name__ == '__main__':
             allocated_memory=images, software_trigger=False)
     time_s = time.perf_counter() - t0
     total_frames = iterations * frames
-    print("\nMax fps = %0.2f\n"%(total_frames/time_s)) # ~ 100 -> 9000 typical
+    print("\nMax fps = %0.2f\n"%(total_frames/time_s)) # ~ 40 -> 1600 typical
     imwrite('test2.tif', images, imagej=True)
 
     # random input testing:
